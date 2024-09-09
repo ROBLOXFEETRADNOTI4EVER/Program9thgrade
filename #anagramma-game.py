@@ -1,5 +1,8 @@
 import random
 from random import shuffle
+import pyfiglet
+from colorama import Fore, Style, init
+import os
 
 easy = ['cat', 'dog', 'fish', 'bird', 'hat', 'car', 'star', 'frog', 'wolf', 'cake', 'lion', 'pear', 'leaf', 
         'snow', 'corn', 'rock', 'duck', 'tree', 'kite', 'shoe', 'moon', 'frog', 'hand', 'boat', 'ball', 
@@ -31,7 +34,6 @@ cool_print = ["WELCOME TO THIS NEW GAME CALLED ANAGRAM YOUR GOAL IS TO GUESS THE
 
 print("Game has started... ,")
 
-
 choice = input("PRESS /1 easy/ PRESS /2 medium/ PRESS /3 hard/: ")
 if choice == "1":
     word_list = easy
@@ -46,13 +48,36 @@ else:
 if word_list:
     #Select a random word from the chosen list
     ifk = random.choice(word_list)  #selcets a random word
-    print(f"Selected word: {ifk}")   #displasys the orignal word for test
-    
-   
+    #print(f"Selected word: {ifk}")   #displasys the orignal word for test
+    bbc = ifk
+
+  
+
+
+    #shuffles a wrord until its not the same as the original failsafe mechanism
+
     shuffled_word = list(ifk)  #convers the word to a list of characters
     random.shuffle(shuffled_word)  #shuffle caratcter
     shuffled_word = ''.join(shuffled_word)  #back to a strring
 
-    print(f"Shuffled word: {shuffled_word}")  #shuffled version of the word
+    #if the shuffles word is the same as the original, shuffle again
+    while shuffled_word == ifk:
+        shuffled_word = list(ifk)
+        random.shuffle(shuffled_word)
+        shuffled_word = ''.join(shuffled_word)
+    
 
-        #in procces of making...
+   # print(f"Shuffled word: {shuffled_word}")  #shuffled version of the word
+    title = pyfiglet.figlet_format(f'{shuffled_word} ', font='doom')
+    print(f'{Fore.YELLOW}{title}{Style.RESET_ALL}')
+    checkbbc = input("")
+
+    if checkbbc == bbc:
+        print("You got it right")
+    else:
+        # The correct word will be displayed if the guess is wrong
+        title = pyfiglet.figlet_format(f'{bbc} ', font='doom')
+        print(f'{Fore.YELLOW}{title}{Style.RESET_ALL}')
+        print("You got it wrong")
+        print(bbc + " Was the right word")
+
