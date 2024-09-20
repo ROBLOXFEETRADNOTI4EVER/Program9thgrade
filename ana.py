@@ -180,6 +180,12 @@ while True:
     if playagain in ["no", "n", "o"]:
         print(f"Your final score is: {score}")
         print("meh you should play my game again sometime!")
+        askforserver = input("Would you like to go back to the encrypt-decrypt software? /Yes/No ")
+        if askforserver in ["no", "n", "o"]:
+            print("see you later bye bye")
+        else:
+             #subprocess.call(['python3', 'Desktop/decrypt-encrypt-client+server/client/userclient.py']) aborted
+             pass
         break
     else:
         print(f"GREAT! Your current score is {score}")
