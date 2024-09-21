@@ -97,7 +97,7 @@ while playing:
         playing = False
         
     elif str.isdigit(choice) and int(choice) in spots:
-        if not spots[int(choice)] in {"X", "O"}:
+        if not spots[int(choice)] in {f"{Fore.RED}X{Style.RESET_ALL}", f"{Fore.BLUE}O{Style.RESET_ALL}"}:
             turn += 1
             spots[int(choice)] = checkTurn(turn)
     if CheckForWin(spots): playing, complete = False, True
