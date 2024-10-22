@@ -95,3 +95,59 @@
 // let result = 6 / 2 ** (2 + 5);
 
 // console.log(result);
+
+// let username;
+// let password;
+// let gender = "";
+
+// // username = window.prompt(`Whats your username?`); Easy way
+// // console.log(username);
+
+// document.getElementById(`mySubmit`).onclick = function(){
+//     username = document.getElementById(`myText`).value;
+//     console.log(username);
+//     document.getElementById(`Header1`).textContent = `Hello ${username}`;
+// }
+
+// const input = document.querySelectorAll("input")
+// const inputValue = input.value;
+// console.log(inputValue);
+
+// document.getElementById(`SBFORM`).onclick = function(){
+//     const selectedGender = document.querySelector('input:checked').value;
+//     console.log(selectedGender);
+
+// }
+
+// let age = window.prompt("how old are you?");
+// age = Number(age); // data type we can change it here to a number
+// age+=1;
+// console.log(age, typeof age); // it will say its a number type since we changed it
+
+// let x ;
+// let y ;
+// let z ;
+
+// x = Number(x);
+// y = String(y);
+// z = Boolean(z);
+// console.log(x,typeof x, y, typeof y,z, typeof z);
+
+
+
+// const PI = 3.14159; // no variabls can be changed so like touple
+// let radius;
+// let circumference;
+
+
+
+
+
+
+// document.getElementById("mySubmit").onclick = function(){
+//     radius = document.getElementById("myText").value;
+//     radius = Number(radius);
+//     circumference = 2 * PI * radius;
+//     document.getElementById("myH3").innerHTML = circumference
+
+// }
