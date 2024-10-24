@@ -152,27 +152,77 @@
 
 // }
 
-const decraseBtn = document.getElementById("decreaseBtn");
-const resetBtn = document.getElementById("resetBtn");
-const increaseBtn = document.getElementById("increaseBtn");
-const countLabel = document.getElementById("countLabel");
+// const decraseBtn = document.getElementById("decreaseBtn");
+// const resetBtn = document.getElementById("resetBtn");
+// const increaseBtn = document.getElementById("increaseBtn");
+// const countLabel = document.getElementById("countLabel");
 
-let count = 0;
+// let count = 0;
 
 
 
-increaseBtn.onclick = function(){
-    count++;
-    countLabel.textContent = count;
+// increaseBtn.onclick = function(){
+//     count++;
+//     countLabel.textContent = count;
+// }
+
+// decraseBtn.onclick = function(){
+//     count--;
+//     countLabel.textContent = count;
+// }
+
+
+// resetBtn.onclick = function(){
+//     count = 0;
+//     countLabel.textContent = count;
+// }
+
+
+const btns = document.getElementsByClassName("btns");
+const myText = document.getElementById("myText");
+
+for(let btn of btns){
+    btn.onclick = function(){
+            if (btn.innerHTML == "Clear"){
+                myText.value = "";
+            }
+            else if (btn.innerHTML == "="){
+                myText.value = eval(myText.value)
+            }
+            // else if (btn.innerHTML == myText.value[myText.value.length -1]){
+            //     console.log("s")
+            // }
+            else{
+                myText.value += btn.innerHTML;
+            }
+        
+    }
 }
 
-decraseBtn.onclick = function(){
-    count--;
-    countLabel.textContent = count;
-}
 
 
-resetBtn.onclick = function(){
-    count = 0;
-    countLabel.textContent = count;
-}
+// let x = 3;
+// let y = 2;
+// let z = 1;
+
+// // z = Math.round(x); // it will always round like normally
+// // z = Math.floor(x); // it will walys round down
+// // z = Math.ceil(x); // it will awlays round up
+
+// // z = Math.trunc(x);
+// // z = Math.pow(x,y)
+// // z = Math.sqrt(81); // 9 
+// // z = Math.log(x);
+// // z = Math.sin(x);
+// // z = Math.cos(x);
+// // z = Math.tan(x);
+// // z = Math.random(x);
+// // z = Math.abs(x);
+// // console.log(z);
+// let max = Math.max(x,y,z)
+// console.log(max)
+
+// let min = Math.min(x,y,z)
+// console.log(max)
+
+// console.log(z);
