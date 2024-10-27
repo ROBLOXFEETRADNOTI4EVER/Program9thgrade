@@ -178,26 +178,26 @@
 // }
 
 
-const btns = document.getElementsByClassName("btns");
-const myText = document.getElementById("myText");
+// const btns = document.getElementsByClassName("btns");
+// const myText = document.getElementById("myText");
 
-for(let btn of btns){
-    btn.onclick = function(){
-            if (btn.innerHTML == "Clear"){
-                myText.value = "";
-            }
-            else if (btn.innerHTML == "="){
-                myText.value = eval(myText.value)
-            }
-            // else if (btn.innerHTML == myText.value[myText.value.length -1]){
-            //     console.log("s")
-            // }
-            else{
-                myText.value += btn.innerHTML;
-            }
+// const min = 10;
+// const max = 30;
+// let randomNum;
+
+
+
+// console.log(randomNum)
+
+
+// for(let btn of btns){
+//     btn.onclick = function(){
+//                 randomNum = Math.floor(Math.random() * (max - min)) + min;
+//                 myText.value = randomNum;
+            
         
-    }
-}
+//     }
+// }
 
 
 
@@ -226,3 +226,83 @@ for(let btn of btns){
 // console.log(max)
 
 // console.log(z);
+
+
+
+// let age = 17;
+
+// if(age >= 18){
+//     console.log("You are old enoguh to enter this site");
+// }
+// else if(age < 18){
+//     console.log("you can't enter this site nigga");
+// }
+// else{
+//     console.log("HELP");
+// }
+
+// let time = 4;
+
+// if(time < 12){
+//     console.log("Good morning!")
+// }
+// else{
+//     console.log("Good afternoon!")
+// }
+
+// let isStudent = true;
+
+// if(isStudent){
+//     console.log("YOu are a student");
+// }
+// else{
+//     console.log("You are not a student");
+// }
+
+// let age = 20;
+// let hasLicense = true;
+
+// if(age >= 16){
+//     console.log("You are old enough to drive ");
+//     if(hasLicense){
+//         console.log("You have a license and you can drive");
+//     }
+//     else{
+//         console.log("YOu don't have a license but you can get one");
+//     }
+// }
+
+// else{
+//     console.log("You must be 16+ to have a license")
+// }
+
+const myCheckBox = document.getElementById("myCheckBox");
+const visaBtn = document.getElementById("visaBtn");
+const masterCardBtn = document.getElementById("masterCardBtn");
+const payPalBtn = document.getElementById("payPalBtn");
+const mySubmit = document.getElementById("mySubmit");
+const subResult = document.getElementById("subResult");
+const paymentResult = document.getElementById("paymentResult");
+
+mySubmit.onclick = function(){
+    
+    if(myCheckBox.checked){
+        subResult.textContent = `You are subscribed!`;
+    }
+    else{
+        subResult.textContent = `You are not subscribed!`;
+    }
+    if(visaBtn.checked){
+        paymentResult.textContent = `You Are paying with Visa`;
+    }
+    else if(masterCardBtn.checked){
+        paymentResult.textContent = `You Are paying with MasterCard`;
+    }
+    else if(payPalBtn.checked){
+        paymentResult.textContent = `You Are paying with Paypal`;
+    }
+    else{
+        paymentResult.textContent = `You must select a payment type`;
+    }
+    
+}
