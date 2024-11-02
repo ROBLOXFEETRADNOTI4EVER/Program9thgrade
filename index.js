@@ -1,77 +1,3 @@
-let canvas = document.querySelector('#canvas'),
-    ctx = canvas.getContext('2d'),
-    w=800,
-    h=600;
-
-const handleResize = () => {
-    w = canvas.width = window.innerWidth;
-	h = canvas.height = window.innerHeight;
-}
-window.onresize = () => handleResize();
-handleResize();
-
-let starConfigs = [];
-
-const mapToRange = (number, inMin, inMax, outMin, outMax) => {return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;}
-
-for(let i=0; i<2000; i++){
-	let size = mapToRange(Math.random(), 0,1, 10, 30);
-	let config = {
-		fill:`hsl(${mapToRange(Math.random(), 4,.00011, 1, 1110)}, 600000%, 50%)`,
-		numPoints: 5,
-		origin: {x:Math.random() * w, y:mapToRange(Math.random(), 0,1, -size, h)},
-		radiusInner: size * .6,
-		radiusOuter: size,
-		rotation:Math.random() * (Math.PI/2),
-		rotationSpeed: mapToRange(Math.random(), 0,1, 0.01, 0.025),
-		vY: mapToRange(Math.random(), 0,1, 3,5),
-	};
-	config.rotationSpeed *= Math.random() > .5 ? 1 : -1;
-	starConfigs.push(config);
-}
-
-const drawSide = (radius, radians, origin, rotation) => {
-	ctx.lineTo((radius * Math.cos(radians+rotation)) + origin.x, 
-			   (radius * Math.sin(radians+rotation)) + origin.y);
-}
-
-const makeStar = (config) => {
-	let degrees = 0;
-	let rotationStep = Math.PI*2 / config.numPoints / 2;
-	ctx.strokeStyle = config.stroke;
-	ctx.fillStyle = config.fill;
-	ctx.beginPath();
-	for (let i=0; i<config.numPoints; i++){
-		degrees += rotationStep;
-		drawSide(config.radiusInner, degrees, config.origin, config.rotation);
-		degrees += rotationStep;
-		drawSide(config.radiusOuter, degrees, config.origin, config.rotation);
-	}
-	ctx.closePath();
-	// ctx.stroke();
-	ctx.fill();
-}
-
-const animate = () => {
-	ctx.fillStyle = 'rgba(10,10,10,.3)';
-	ctx.fillRect(0,0,w,h);
-	
-	starConfigs.forEach(star => {
-		star.rotation += star.rotationSpeed;
-		star.origin.y += star.vY;
-		if(star.origin.y > h + star.radiusOuter){
-			star.origin.y = -star.radiusOuter;
-			star.origin.x = Math.random() * w;
-		}
-		makeStar(star);
-	});
-	
-	requestAnimationFrame(animate);
-}
-
-animate();
-
-
 
 // let day = 9;
 
@@ -175,13 +101,73 @@ animate();
 // }
 
 
-let phonenumber = "123-335-32325";
+// let phonenumber = "123-335-32325";
 
-// phonenumber = phonenumber.replaceAll("-","");
-// console.log(phonenumber);
+// // phonenumber = phonenumber.replaceAll("-","");
+// // console.log(phonenumber);
 
-// phonenumber = phonenumber.padStart(30, "0"); // this fills the front of the string with the other string until the character char is 15 characters long 
+// // phonenumber = phonenumber.padStart(30, "0"); // this fills the front of the string with the other string until the character char is 15 characters long 
 
-// phonenumber = phonenumber.padEnd(30, "0"); // this  fillls the ond of the string with the other string until the character char is 15 characters long 
+// // phonenumber = phonenumber.padEnd(30, "0"); // this  fillls the ond of the string with the other string until the character char is 15 characters long 
 
-console.log(phonenumber)
+// console.log(phonenumber)
+
+// const fullName = "Balazs Szabo";
+
+// // let firtname = fullName.slice(0,6);
+// // let lastname = fullName.slice(7,12);
+
+// // let firstchar = fullName.slice(0,1);
+// // console.log(firstchar);
+// // let lastchar = fullName.slice(-1); // negativ index goes from back to front fucking usefull
+// // console.log(lastchar);
+
+// let firstName = fullName.slice(0, fullName.indexOf(" "));
+// let lastname =  fullName.slice(fullName.indexOf(" ") + 1);
+// console.log(firstName);
+// console.log(lastname);
+
+
+// const email = "brocolisex@gmail.com" ;
+
+// let username = email.slice(0,email.indexOf("@"));
+// let provider = email.slice(email.indexOf("@") + 1);
+// console.log(provider)
+// console.log(username);
+
+
+// let username = window.prompt("Enter your username");
+
+// // username = username.replaceAll(" ","");
+
+// // username = username.trim();
+// // let letter = username.charAt(0);
+// // letter = letter.toUpperCase();
+// // let extraChars = username.slice(1);
+// // extraChars = extraChars.toLowerCase();
+// // username = letter + extraChars;
+// // console.log(username);
+
+
+// username = username.trim().charAt(0).toUpperCase().replaceAll(" ","") + username.trim().slice(1).toLowerCase().replaceAll(" ","");
+// console.log(username)
+
+// const temp = 20;
+
+// if(temp <= 0 || temp > 30){
+    
+//     console.log("Wheater is bad");
+// }
+// else{
+//     console.log("the weeather is good");
+// }
+
+const isSunny = true;
+
+if(!isSunny){
+    console.log("it is cloudy");
+
+}
+else{
+    console.log("it is sunny")
+}
