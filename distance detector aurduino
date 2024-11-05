@@ -1,0 +1,40 @@
+const int trigPin = 9;
+const int echoPin = 10;
+const int niggerPin = 11;
+const int Patrik = 13;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(niggerPin, OUTPUT);
+  pinMode(Patrik, OUTPUT);
+}
+
+void loop(){
+  
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(5);
+  digitalWrite(trigPin, LOW);
+
+  
+
+  float t = pulseIn(echoPin, HIGH);
+  float distance = t*0.017015;
+  Serial.print("Distance: ");
+  Serial.println(distance);
+  if(distance < 8 && distance > 6){
+    digitalWrite(niggerPin, HIGH);
+    tone(5, 1000, 250);
+        tone(5, 1200, 800);
+    tone(5, 1100, 500);
+
+  }
+
+  else{
+    digitalWrite(niggerPin, LOW);
+
+  }
+}
