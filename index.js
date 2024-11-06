@@ -162,12 +162,78 @@
 //     console.log("the weeather is good");
 // }
 
-const isSunny = true;
+// const isSunny = true;
 
-if(!isSunny){
-    console.log("it is cloudy");
+// if(!isSunny){
+//     console.log("it is cloudy");
 
-}
-else{
-    console.log("it is sunny")
+// }
+// else{
+//     console.log("it is sunny")
+// }
+
+//  = assigment operator 
+//  == comparison operator (compare if values are equal)
+//  === strict equality oprator ( compare if vaklues & datatype are equal)
+//  != ineqality operator
+//  !== strict inequality operator  (so a string with the same vlaue as a number can't be true  if the number isn't a string example "3.14" not qual to(!==) 3.14)
+
+
+
+
+
+
+// const PI = 3.14;
+ 
+// if(PI !== 3.14){
+//     console.log("thats is not Pi");
+// }
+// else{
+//     console.log("that is  pi")
+// }
+
+// let username;
+
+// do{
+//     username = window.prompt("enter your name");
+// }while(username === "" || username === null)
+
+// console.log(`Hello ${username}`);
+
+// let loggedIN = false;
+// let username;
+// let password;
+
+// while(!loggedIN){
+//     username = window.prompt(`Enter your username`);
+//     password = window.prompt(`Enter your password`);
+
+//     if(username === "MyUS" && password === "Balazs1"){
+//         loggedIN = true;
+//         console.log("You are logged in!");szer
+    
+//     }
+//     else{
+//         console.log("invalid credentials! please try again");
+//     }
+// }
+
+
+// for(let i = 10; i > 0; i-=3){
+//     console.log(i)
+// }
+// console.log("Happy new year")
+
+for(let i = 1; i <= 22; i++){
+    if(i == 13){
+        continue;
+    }
+    else if(i == 21){
+        break;
+    }
+    else{
+        console.log(i);
+    }
+
+  
 }
