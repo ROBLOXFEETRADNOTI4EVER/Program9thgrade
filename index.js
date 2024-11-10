@@ -224,16 +224,33 @@
 // }
 // console.log("Happy new year")
 
-for(let i = 1; i <= 22; i++){
-    if(i == 13){
-        continue;
-    }
-    else if(i == 21){
-        break;
-    }
-    else{
-        console.log(i);
-    }
+// for(let i = 1; i <= 22; i++){
+//     if(i == 13){
+//         continue;
+//     }
+//     else if(i == 21){
+//         break;
+//     }
+//     else{
+//         console.log(i);
+//     }
 
   
-}
+// }
+// startProgram();
+
+// function startProgram(){
+//     let username = "Bro";
+//     let age = 21;
+
+// happyBirthday(username,age);
+
+// }
+
+
+// function happyBirthday(username, age){
+//     console.log("I hate niggers i hate them");
+//     console.log("I hate niggers i hate them 2");
+//     console.log("I hate niggers i hate them 3x as i hated them before","I", username ,age,"Years old");
+
+// }

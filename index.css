@@ -1,0 +1,126 @@
+body {
+    --s: 25vmin;
+    --p: calc(var(--s) / 2);
+    --c1: rgb(194, 131, 15);
+    --c2: rgb(66, 56, 44);
+    --c3: rgb(37, 22, 5);
+    --bg: var(--c3);
+    --d: 4000ms;
+    --e: cubic-bezier(0.76, 0, 0.24, 1);
+    
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+    background-size: var(--s) var(--s);
+    background-position: 
+      calc(var(--p) *  1) calc(var(--p) *  0), 
+      calc(var(--p) * -1) calc(var(--p) *  1), 
+      calc(var(--p) *  1) calc(var(--p) * -1), 
+      calc(var(--p) * -1) calc(var(--p) *  0);
+    animation: 
+      color var(--d) var(--e) infinite,
+      position var(--d) var(--e) infinite;
+  }
+  
+  @keyframes color {
+    0%, 25% {
+      --bg: var(--c3);
+    }
+    26%, 50% {
+      --bg: var(--c1);
+    }
+    51%, 75% {
+      --bg: var(--c3);
+    }
+    76%, 100% {
+      --bg: var(--c2);
+    }
+  }
+  
+  @keyframes position {
+    0% {
+      background-position: 
+        calc(var(--p) *  1) calc(var(--p) *  0), 
+        calc(var(--p) * -1) calc(var(--p) *  1), 
+        calc(var(--p) *  1) calc(var(--p) * -1), 
+        calc(var(--p) * -1) calc(var(--p) *  0);
+    }
+    25% {
+      background-position: 
+        calc(var(--p) *  1) calc(var(--p) *  4), 
+        calc(var(--p) * -1) calc(var(--p) *  5), 
+        calc(var(--p) *  1) calc(var(--p) *  3), 
+        calc(var(--p) * -1) calc(var(--p) *  4);
+    }
+    50% {
+      background-position: 
+        calc(var(--p) *  3) calc(var(--p) * 8), 
+        calc(var(--p) * -3) calc(var(--p) * 9), 
+        calc(var(--p) *  2) calc(var(--p) * 7), 
+        calc(var(--p) * -2) calc(var(--p) * 8);
+    }
+    75% {
+      background-position: 
+        calc(var(--p) *  3) calc(var(--p) * 12), 
+        calc(var(--p) * -3) calc(var(--p) * 13), 
+        calc(var(--p) *  2) calc(var(--p) * 11), 
+        calc(var(--p) * -2) calc(var(--p) * 12);
+    }
+    100% {    
+      background-position: 
+        calc(var(--p) *  5) calc(var(--p) * 16), 
+        calc(var(--p) * -5) calc(var(--p) * 17), 
+        calc(var(--p) *  5) calc(var(--p) * 15), 
+        calc(var(--p) * -5) calc(var(--p) * 16);
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    body {
+      animation: none;
+    }
+  }
+
+#ddd{
+    position: absolute;
+    font-size: 10em;
+    text-align: right;
+    left: 10px;
+    margin-top: -3.2em;
+    color: rgb(231, 174, 15);
+    user-select: none;
+}
+
+
+.mainBtns {
+    position: relative;    /* Use absolute positioning for flexible placement */
+    top: -20em;              /* Set default position */
+    left: -0.5em;
+    width: 250px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 30px; 
+    border-color: rgb(226, 113, 7);
+    border-width: -10px;
+    border-radius: 15px;
+    font-size: xx-large;
+    border-style: ridge;
+    background-color: rgb(165, 78, 7);
+}
+
+.mainBtns:hover{
+    background-color: rgba(250, 92, 0, 0.705);
+}
+
+.mainBtns:active {
+    border-color: rgba(155, 96, 18, 0.733);
+    background-color: rgba(165, 78, 7, 0.486);
+}
+
+#Experiences{
+
+    font-size: 2em;
+}
