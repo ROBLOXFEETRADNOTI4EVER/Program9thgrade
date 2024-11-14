@@ -335,56 +335,103 @@ function toFahrenheit(temp){
 // happyBirthday("Hitler", 4);
 
 
-function add(x, y){
-    let result = x + y;
-    return result;
-}
+// function add(x, y){
+//     let result = x + y;
+//     return result;
+// }
 
-let answer = add(2,3);
-    console.log(answer);
+// let answer = add(2,3);
+//     console.log(answer);
 
-// or use this
+// // or use this
 
-function subtract(x,y){
-    return x - y;
-}
+// function subtract(x,y){
+//     return x - y;
+// }
 
-function multiply(x,y){
-    return x * y;
-}
+// function multiply(x,y){
+//     return x * y;
+// }
 
-function devide(x,y){
-    return x / y;
-}
+// function devide(x,y){
+//     return x / y;
+// }
 
-// console.log(add(5, 9));
-// console.log(subtract(3, 9));
-// console.log(multiply(3, 10));
-// console.log(devide(634284, 2));
+// // console.log(add(5, 9));
+// // console.log(subtract(3, 9));
+// // console.log(multiply(3, 10));
+// // console.log(devide(634284, 2));
 
-// checking if a number is even
-function isEven(number){
-    // if(number % 2 === 0){
-    //     return true; 
-    // }
-    // else{
-    //     return false;
-    // }
+// // checking if a number is even
+// function isEven(number){
+//     // if(number % 2 === 0){
+//     //     return true; 
+//     // }
+//     // else{
+//     //     return false;
+//     // }
 
-    return number % 2 == 0 ? true : false;
-}
-console.log(isEven(2));
+//     return number % 2 == 0 ? true : false;
+// }
+// console.log(isEven(2));
 
 
-function Email(email){
-    // if(email.includes("@")){
-    //     return true;
-    // }
-    // else{
-    //     return false;
-    // }
+// function Email(email){
+//     // if(email.includes("@")){
+//     //     return true;
+//     // }
+//     // else{
+//     //     return false;
+//     // }
 
-    return  email.includes("@") ? true: false;
-}
+//     return  email.includes("@") ? true: false;
+// }
 
-console.log(Email("niggerhate.com"))
+// console.log(Email("niggerhate.com"))
+
+
+
+
+
+
+let fruits = ["apple", "orange","banana"];
+
+
+// fruits[3] = "coconut";
+
+// fruits.push("coconut"); // this will push it to the end of the array
+// fruits.pop(); // this will remove the last element of the array
+// fruits.unshift("hitler"); //So it apends hitler to  index 0
+// fruits.shift(); // so this removes hitler the first element
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
+// console.log(fruits[3]);
+
+// fruits.push("pedofil")
+// let numOfFruits = fruits.length;
+
+// let index = fruits.indexOf("apple")
+// // console.log(numOfFruits);
+// console.log(index);
+
+
+// for(let i = 0; i < fruits.length; i+=2){
+//     console.log(fruits[i]);
+// }
+
+// for(let i = fruits.length -1 ; i  >= 0; i--){
+//     console.log(fruits[i]);
+// }
+
+//  for(let fruist of fruits){
+//     console.log(fruist);
+// }
+
+// fruits.sort(); normal sorting methrod
+// fruits.sort().reverse(); // reverse sort
+
+// for(let fuck of fruits){
+//     console.log(fuck);
+// }
