@@ -435,3 +435,22 @@ let fruits = ["apple", "orange","banana"];
 // for(let fuck of fruits){
 //     console.log(fuck);
 // }
+
+
+const matrix = [[1, 2, 3],
+                [4, 5, 6],
+                [7, 8 , 9],
+                ["*",0,"#"]];
+
+
+let hitler = matrix[0][0];
+hitler = 'X';
+matrix[0][0] = 'X';
+console.log(hitler);
+
+for(let row of matrix){
+    const rowString = row.join(' ');
+    console.log(rowString);
+
+}
+
