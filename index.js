@@ -292,34 +292,34 @@
 
 
 
-document.getElementById("submitButton").onclick = function(){
+// document.getElementById("submitButton").onclick = function(){
 
-    let temp;
+//     let temp;
 
-    if(document.getElementById("cButton").checked){
-        temp = document.getElementById("textBox").value;
-        temp = Number(temp);
-        temp = toCelsius(temp);
-        document.getElementById("tempLabel").innerHTML = temp + "°C";
-    }
-    else if(document.getElementById("fButton").checked){
-        temp = document.getElementById("textBox").value;
-        temp = Number(temp);
-        temp = toFahrenheit(temp);
-        document.getElementById("tempLabel").innerHTML = temp + "°F";
-    }
-    else{
-        document.getElementById("tempLabel").innerHTML = "Select a unit";
-    }
-}
+//     if(document.getElementById("cButton").checked){
+//         temp = document.getElementById("textBox").value;
+//         temp = Number(temp);
+//         temp = toCelsius(temp);
+//         document.getElementById("tempLabel").innerHTML = temp + "°C";
+//     }
+//     else if(document.getElementById("fButton").checked){
+//         temp = document.getElementById("textBox").value;
+//         temp = Number(temp);
+//         temp = toFahrenheit(temp);
+//         document.getElementById("tempLabel").innerHTML = temp + "°F";
+//     }
+//     else{
+//         document.getElementById("tempLabel").innerHTML = "Select a unit";
+//     }
+// }
 
-function toCelsius(temp){
-    return (temp - 32) * (5/9);
-}
+// function toCelsius(temp){
+//     return (temp - 32) * (5/9);
+// }
 
-function toFahrenheit(temp){
-    return temp * 9 / 5 + 32;
-}
+// function toFahrenheit(temp){
+//     return temp * 9 / 5 + 32;
+// }
 
 // let name;
 // let age;
@@ -394,7 +394,7 @@ function toFahrenheit(temp){
 
 
 
-let fruits = ["apple", "orange","banana"];
+// let fruits = ["apple", "orange","banana"];
 
 
 // fruits[3] = "coconut";
@@ -472,88 +472,128 @@ let fruits = ["apple", "orange","banana"];
 // console.log(foods.join('-'));
 
 
-function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
+// function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
 
 
 
-    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+//     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 
-    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    const numberChars = "0123456789";
+//     const numberChars = "0123456789";
 
-    const symbolChars = "!@#$%^&*()_+-=";
-
-
-
-    let allowedChars = "";
-
-    let password = "";
+//     const symbolChars = "!@#$%^&*()_+-=";
 
 
 
-    allowedChars += includeLowercase ? lowercaseChars : "";
+//     let allowedChars = "";
 
-    allowedChars += includeUppercase ? uppercaseChars : "";
-
-    allowedChars += includeNumbers ? numberChars : "";
-
-    allowedChars += includeSymbols ? symbolChars : "";
+//     let password = "";
 
 
 
-    if(length <= 0){
+//     allowedChars += includeLowercase ? lowercaseChars : "";
 
-        return `(password length must be at least 1)`;
+//     allowedChars += includeUppercase ? uppercaseChars : "";
 
-    }
+//     allowedChars += includeNumbers ? numberChars : "";
 
-    if(allowedChars.length === 0){
-
-        return `(At least 1 set of character needs to be selected)`;
-
-    }
+//     allowedChars += includeSymbols ? symbolChars : "";
 
 
 
-    for(let i = 0; i < length; i++){
+//     if(length <= 0){
 
-        const randomIndex = Math.floor(Math.random() * allowedChars.length);
+//         return `(password length must be at least 1)`;
 
-        password += allowedChars[randomIndex];
+//     }
 
-    }
+//     if(allowedChars.length === 0){
+
+//         return `(At least 1 set of character needs to be selected)`;
+
+//     }
 
 
 
-    return password;
+//     for(let i = 0; i < length; i++){
 
+//         const randomIndex = Math.floor(Math.random() * allowedChars.length);
+
+//         password += allowedChars[randomIndex];
+
+//     }
+
+
+
+//     return password;
+
+// }
+
+
+
+// const passwordLength = 0;
+
+// const includeLowercase = true;
+
+// const includeUppercase = true;
+
+// const includeNumbers = true;
+
+// const includeSymbols = true;
+
+
+
+// const password = generatePassword(passwordLength, 
+
+//                                  includeLowercase, 
+
+//                                  includeUppercase, 
+
+//                                  includeNumbers, 
+
+//                                  includeSymbols);
+
+
+
+// console.log(`Generated password: ${password}`);
+
+// hello(goodbye);
+
+
+// function hello(callback){
+//     console.log("Hello!");
+//     callback();
+
+// }
+
+// function wait(){
+//     console.log("Wait!")
+
+// }
+
+
+// function leave(){
+//     console.log("Leave!")
+// }
+
+
+// function goodbye(){
+//     console.log("Goodbye!")
+// }
+
+
+sum(displayPage, 1 , 4);
+
+function sum(callback,x,y){
+    let result = x + y;
+    callback(result);
 }
 
+function displayConsole(result){
+    console.log(result);
+}
 
-
-const passwordLength = 0;
-
-const includeLowercase = true;
-
-const includeUppercase = true;
-
-const includeNumbers = true;
-
-const includeSymbols = true;
-
-
-
-const password = generatePassword(passwordLength, 
-
-                                 includeLowercase, 
-
-                                 includeUppercase, 
-
-                                 includeNumbers, 
-
-                                 includeSymbols);
-
-
-
-console.log(`Generated password: ${password}`);
+function displayPage(result){
+    document.getElementById("myH1").textContent = result;
+}
