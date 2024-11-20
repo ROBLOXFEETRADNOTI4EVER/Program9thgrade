@@ -583,17 +583,72 @@
 // }
 
 
-sum(displayPage, 1 , 4);
+// sum(displayPage, 1 , 4);
 
-function sum(callback,x,y){
-    let result = x + y;
-    callback(result);
+// function sum(callback,x,y){
+//     let result = x + y;
+//     callback(result);
+// }
+
+// function displayConsole(result){
+//     console.log(result);
+// }
+
+// function displayPage(result){
+//     document.getElementById("myH1").textContent = result;
+// }
+
+
+// let numbers = [1,2,3,4,5];
+
+// numbers.forEach(cube);
+// numbers.forEach(display);
+
+// function double(element, index,array){
+//     array[index] = element * 2;
+// }
+
+// function triple(element, index,array){
+//     array[index] = element * 3;
+// }
+
+// function square(element,index,array){
+//     array[index] = Math.pow(element,2);
+// }
+
+// function cube(element,index,array){
+//     array[index] = Math.pow(element,3);
+// }
+
+
+
+
+// function display(element){
+//     console.log(element);
+
+// }
+
+let fruits  = ["apple", "orange","BANANA","coconut"];
+
+// fruits.forEach(uppercase);
+fruits.forEach(captilaize);
+fruits.forEach(display);
+
+
+function uppercase(element,index,array){
+    array[index] = element.toUpperCase();
 }
 
-function displayConsole(result){
-    console.log(result);
+function lowercase(element,index,array){
+    array[index] = element.toLowerCase();
 }
 
-function displayPage(result){
-    document.getElementById("myH1").textContent = result;
+function captilaize(element,index,array){
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+
+}
+
+function display(element){
+    console.log(element);
+
 }
