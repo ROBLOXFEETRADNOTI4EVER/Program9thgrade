@@ -57,20 +57,33 @@
 //     return element.toLowerCase();
 // }
 
-const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
+// const dates = ["2024-1-10", "2025-2-20", "2026-3-30"];
 
-const formattedDates = dates.map(formatDates);
-
-
-
-console.log(formattedDates);
+// const formattedDates = dates.map(formatDates);
 
 
 
-function formatDates(element){
+// console.log(formattedDates);
 
+
+
+// function formatDates(element){
+
+//     const parts = element.split("-");
+
+//     return `${parts[1]}/${parts[2]}/${parts[0]}`;
+
+// }
+
+
+const payments = ["50-2024.04.30-Bob","60-2008.04.05-Julia","6-222.04.6-Alen","734-2023.05.07-Milan"];
+
+const F = payments.map(formatPamynets);
+
+console.log(F.join(""));
+
+function formatPamynets(element){
     const parts = element.split("-");
-
-    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+    return `\nUser:${parts[2]} paid, ${parts[0]} $bucks,${parts[1]}<-- tis time`
 
 }
