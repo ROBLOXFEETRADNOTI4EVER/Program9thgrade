@@ -1,0 +1,101 @@
+body {
+    background-image: url(/images/Background1.jpeg);
+    background-repeat: no-repeat;
+
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#Hypixel {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#Hypixel img {
+    max-width: 300px;
+    height: auto;
+}
+
+.blocks {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.formRow-label {
+    font-size: 16px;
+    color: #d1d1d1;
+    margin-bottom: 8px;
+}
+
+.input {
+    width: 110%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #f0f0f0;
+    font-size: 14px;
+    position: relative;
+    left: -50px;
+}
+
+.input:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+.button--primary {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    width: 117%;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    left: -50px;
+}
+
+.button--primary:hover {
+    background-color: #ff2a2a;
+}
+
+.inputChoices-choice {
+    color: #d1d1d1;
+    margin-top: 10px;
+}
+
+.iconic-label {
+    font-size: 14px;
+}
+
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.block-outer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.block-outer-middle {
+    font-size: 14px;
+    color: #d1d1d1;
+}
