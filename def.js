@@ -135,29 +135,29 @@ const Immigrants = [
     "Migrant42-MT-Vandal"
 ];
 
-const Muslims = Immigrants.map(GoatFuckers);
-console.log(Muslims.join("|-xx-|"));
+// const Muslims = Immigrants.map(GoatFuckers);
+// console.log(Muslims.join("|-xx-|"));
 
-function GoatFuckers(element){
-    const  parts = element.split("-");
-    return `\nPeople :${parts[0]} Wantedfor: ${parts[2]} County${parts[1]}`;
-}
-
-
-// under me i will do Name religion Budget and pat 
-
-const Niggers = ["Bob|Chirstian|50$|Dog","Sam|Atheist|90$|None","smith|Budhism|44$|Parrot","spongabob|Muslim|84$|Sark"];
+// function GoatFuckers(element){
+//     const  parts = element.split("-");
+//     return `\nPeople :${parts[0]} Wantedfor: ${parts[2]} County${parts[1]}`;
+// }
 
 
-const niggermigger = Niggers.map(DeportNigger);
-console.log(niggermigger.join("|here|"))
+// // under me i will do Name religion Budget and pat 
+
+// const Niggers = ["Bob|Chirstian|50$|Dog","Sam|Atheist|90$|None","smith|Budhism|44$|Parrot","spongabob|Muslim|84$|Sark"];
 
 
-function DeportNigger(element){
-    const Niglets = element.split("|");
-    return `Name ${Niglets[0]} Pet ${Niglets[3]} Religion ${Niglets[1]}, Money ${Niglets[2]}`;
+// const niggermigger = Niggers.map(DeportNigger);
+// console.log(niggermigger.join("|here|"))
+
+
+// function DeportNigger(element){
+//     const Niglets = element.split("|");
+//     return `Name ${Niglets[0]} Pet ${Niglets[3]} Religion ${Niglets[1]}, Money ${Niglets[2]}`;
     
-}
+// }
 
 document.addEventListener('DOMContentLoaded', function () {
     const checkbox = document.getElementById('checkboxItself');
@@ -170,3 +170,51 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+function Game(){
+    let Ongame = true;
+    window.alert("Rock ,Paper, Scissors\n Ready ? Set NOW");
+
+    while(Ongame){
+
+        let userinput = window.prompt("Enter Rock,Paper,Scissors");
+        userinput = userinput.toLowerCase();
+        if (userinput == "rock" || userinput == "paper" || userinput == "scissors") {
+            Ongame = false;
+            playgame(userinput)
+
+    }
+    else{
+        window.prompt(`You can't have ${userinput} must choose one  \n Rock, Paper, Scissors`);
+        Ongame = true;
+    }
+    }
+
+    
+    
+}
+
+Game();
+
+
+function playgame(userinput){
+    window.alert("implaying");
+    let Items = ["Rock","Paper","Scissors"];
+    Items = Items.map(item => item.toLowerCase());
+    let randomm = Math.floor(Math.random() * Items.length);
+    let machinechoice = Items[randomm];
+    window.alert(machinechoice);
+    window.alert(`user input waasssss ${userinput} ANNND machine chooice wasss ${machinechoice}`);
+    if (userinput === machinechoice) {
+        window.alert("It's a tie!");
+    } else if (
+        (userinput === "paper" && machinechoice === "rock") ||
+        (userinput === "rock" && machinechoice === "scissors") ||
+        (userinput === "scissors" && machinechoice === "paper")
+    ) {
+        window.alert("You won!");
+    } else {
+        window.alert("You lost!");
+    }
+}
