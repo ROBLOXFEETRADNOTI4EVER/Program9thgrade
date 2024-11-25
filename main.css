@@ -1,47 +1,53 @@
 body{
-    background-color:  #1a1a1a;
-    background-image: url(images/Background1.jpeg);
-    background-repeat: no-repeat;
+    background-color: #0f479f;
+    background-image: url(images/tvgrilhug.webp);
+    background-repeat: re;
+    background-blend-mode: hard-light;
+    user-select: none;
 }
 
-#Hypixel{
+#TvGrilLogo{
+     background-color: #1e4e9c2c;
+    display: flex;
+    opacity: 60%;
+    background: 	#ed2788;
+    border-radius: 300px;
+    border-color: #ed2788;
+    border-width: -1px;
+    border-style: dashed;
+}
+
+#tvgirlimage{
     display: flex;
     justify-content: center;
-    margin-top: 4.4em;
 }
 
-#sc{
-    font-size: 2.2em;
-    color: aliceblue;
-    text-align: center;
-    margin-top: 2em;
+#txtshit{
+    user-select: none;
+    color:#c20c73;
+    font-family: Futura,Helvetica,'Courier New', Courier, monospace;
 }
-
-#cloudfare{
-    display: flex;
-    margin-top: 5em;
-    justify-content: center;
-
-}
-
-#Checkbox{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: -139px;   
-    top: -55px;
-}
-
-#checkboxItself{
-    height: 30px;
-    width: 30px;
-    border-color: #1a1a1a;
-    border-radius: 10%;
+#tabletv{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
     
 }
 
-#checkboxItself:checked{
-    transition: ease-in-out;
-    transition-duration: 300ms;
-    
-}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #3230b1;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e910a06b;
+  }
+
+  

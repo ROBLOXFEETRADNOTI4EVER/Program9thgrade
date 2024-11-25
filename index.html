@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just a moment...</title>
-    <link rel="stylesheet"  href="main.css">
+    <title>TvGril</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div id="Hypixel">
-        <img src="images/HypixelLogo.png" alt="Hypixel" sizes="10" height="160" draggable="false">
+    <div id="tvgirlimage">
+        <div id="txtshit" draggable="false">
+        <h1>and how long will it take? <br> <br> and go straight into the arms <br><br> and I'll just wait...  </h1> 
+        </div>  
+        <img src="images/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="tvgirl"  id="TvGrilLogo" draggable="false" height="500">
+        <h1 id="txtshit"> <br> before you start to hate yourself <br> <br>of somebody else<br><br>wait until those arms belong to me</h1> 
     </div>
-    <h1 id="sc">Security check</h1>
-    <div id="cloudfare">
-        <img src="images/cloudfare.png" alt="sizes" height="75" draggable="false">
+    <table id="tabletv">
+        <tr>
+            <th>Favorite songs of tv girl</th>
+            <th>|Most relatable tv girl song</th>
+            <th>|Moody theme</th>
+        </tr>
+        <tr>
+            <td>Taking what not yours</td>
+            <td>Cigarettes out the Window</td>
+            <td>The blonde</td>
+        </tr>
+    </table>
+
+    <div id="lyricsguesser">
+        <h1 style="color: rgba(240, 255, 255, 0.705);">Your job is to guess the lyrics</h1>
+        <h1 id="Lyrics" style="color: rgb(255, 255, 255);">Example</h1> 
+        <form id="guessForm" onsubmit="submitGuess(event)">
+            <input type="text" id="inputGuess" style="border-radius: 30px; height: 30px; width: 2000px; font-size: xx-large;" placeholder="Type the next part of the lyric...">
+            <button type="submit" style="border-radius: 30px; height: 30px; width: 2000px; font-size: xx-large;">Submit</button>
+        </form>
+        <p id="message" style="color: rgb(255, 0, 234);"></p> 
     </div>
-    <div id="Checkbox">
-        <input  type="checkbox" name="Checkbox" id="checkboxItself">
-    </div>
-    <script src="def.js"></script>
+    
+    <script src="index.js"></script>
 </body>
 </html>
