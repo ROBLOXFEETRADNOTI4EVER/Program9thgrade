@@ -1,98 +1,168 @@
-// let h1lyrics = document.getElementById("Lyrics");
-// let inputGuess = document.getElementById("inputGuess");
-// let message = document.getElementById("message");
+// creating a basic calorie counter in jacscript
+// creat an input to enter foods with each gram of protein carbs and fat and optional waterweight of it so it can be calculated 
+// after it show what is avalable in  a list format can do dropdown aswell
+// make user select or type what he  ate and then calculate the calroies
+// allso creat a function so user can select calaorie each day max and min and program upates real time to it if its over or under
+// optional user can select min and max of each protein carbs and fatsb but can't exceed the calrie limit 
+// also make it so it won't just ask for 100g  since everything is  in 100 grams so i need to divide it by 10 
 
-// let lyrics = [
-//     "Kisses in the alley, where the sun don't shine|her shadow fades just like mine.",
-//     "She wore regret like a second skin|but never let the sorrow in.",
-//     "A Polaroid smile fades with time|just like your hand slipping out of mine.",
-//     "I heard your laugh in an old tape hiss|like a memory I can't dismiss.",
-//     "You left your name in the condensation|a fleeting ghost of conversation.",
-//     "Echoes of goodbye haunt the payphone line|but I’m still waiting for a sign.",
-//     "The party ended, but you're still dancing|lost in a song that's always chancing.",
-//     "Love letters torn, scattered in the breeze|like secrets whispered to the trees."
-// ];
+let calroiesMax = 2000;
+let calroiesMin = 1250;
+let userCalories = 0;
+let calorie = 0;
+let userCarsbs = 0;
+let userProteins = 0;
+let userFats = 0;
+let selectedFoods = document.getElementById("somth")
+selectedFoods.innerHTML = "" 
 
-// // to soterr ending of the lyrics
-// let endings = lyrics.map(lyric => lyric.split("|")[1]);
+const carbs = 4;
+const proteins = 4;
+const fats = 9;
 
-// function selectlyrics() {
-//     let randomIndex = Math.floor(Math.random() * lyrics.length);
-//     let randomLyric = lyrics[randomIndex].split("|")[0]; // First part of disaplpy
-//     currentEnding = lyrics[randomIndex].split("|")[1]; // end part of siplay
-//     return randomLyric;
-// }
+// let food100g = [
+//     "orange|12|0.9|0.2", 
+//     "milk|5|3.4|3.3",    
+//     "beef|0|26|15",      
+//     "eggs|0.6|13|10"     
+// ];// strcture is like this : Name|Carbs|Proteins|Fats
 
+// let showitems = document.getElementById(`searchYeah`)
 
-
-// let currentEnding = "";
-
-// let randomLyric = selectlyrics();
-
-// h1lyrics.innerHTML = randomLyric;
-
-
+// let foods = food100g.map(food => food.split("|")[1]); // [to do[] make it so i can divide the carbs protiens and fats
 
 
-// function submitGuess(event) {
-//     event.preventDefault(); // prevent from resubmit and laoding
-//     // users input
-//     let userGuess = inputGuess.value.trim();
+// console.log(foods);
 
-//     // compare useres shit wiht the lyrics end
-//     if (userGuess === currentEnding.trim()) {
-//         message.innerHTML = "Correct! Next lyric coming up...";
-//         // after correc thos the lrycs
-//         randomLyric = selectlyrics();
-//         h1lyrics.innerHTML = randomLyric;
-//         inputGuess.value = ""; // cls the input field
-//     } else {
-//         message.innerHTML = "Incorrect, try again!";
-//     }
-// }
+// okay i gonna do that i will put a picture and console log the carsb a person can eat in a day
+
+calorie = (userCarsbs + userProteins + userFats)
+let calvis = document.getElementById("calVisual")
+calvis.innerHTML = `Calories ${calorie} \n Carbs ${userCarsbs}\n Proteins ${userProteins}\n fats ${userFats}`
+
+
+let egg = document.querySelector("Egg");
 
 
 
-// let numbers = [1,2,3,4,5,6,7,8,9];
-// let evennumbs = numbers.filter(Iseven);
+function eggmae(){
+    selectedFoods.innerHTML = "Egg" ;
+    eggadd();
+
+}
+
+
+let Lunclyy = document.querySelector("Lunclly");
+function Luncly(){
+    selectedFoods.innerHTML = "luncly"
+    Lunclyy1()
+}
+
+function eggadd() {
+    // Update the user's macros
+    userCarsbs += 0.5; // Add carbs for the egg
+    userProteins += 6; // Add proteins for the egg
+    userFats += 6; // Add fats for the egg
+
+    // Calculate the updated calories dynamically
+    userCalories = (userCarsbs * carbs) + (userProteins * proteins) + (userFats * fats);
+    // Update the visual representation
+    let calvis = document.getElementById("calVisual");
+    calvis.innerHTML = `Calories: ${userCalories.toFixed(0)} <br> 
+                        Carbs: ${userCarsbs.toFixed(1)}g <br> 
+                        Proteins: ${userProteins.toFixed(1)}g <br> 
+                        Fats: ${userFats.toFixed(1)}g`;
+    // Optionally, log to the console for debugging
+    console.log("Egg added. Updated values:");
+    console.log(`Calories: ${userCalories}, Carbs: ${userCarsbs}, Proteins: ${userProteins}, Fats: ${userFats}`);
+}
+
+
+
+function Lunclyy1(){
+    userCarsbs += 22;
+    userProteins += 11;
+    userFats += 12;
+    userCalories = (userCarsbs * carbs) + (userProteins * proteins) + (userFats * fats);
+    let calvis = document.getElementById("calVisual");
+    calvis.innerHTML = `Calories: ${userCalories.toFixed(0)} <br> 
+                        Carbs: ${userCarsbs.toFixed(1)}g <br> 
+                        Proteins: ${userProteins.toFixed(1)}g <br> 
+                        Fats: ${userFats.toFixed(1)}g`;
+                        console.log("Lunchly added I got my drippy cheese. Updated values:");
+                        console.log(`Calories: ${userCalories}, Carbs: ${userCarsbs}, Proteins: ${userProteins}, Fats: ${userFats}`);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let numbs = [1,2,3,4,5,6,7,8,9];
+// let evenumbs = numbs.filter(Iseven);
+// let oddnumbs = numbs.filter(isodd);
+// console.log(`${evenumbs}`);
+// console.log(`${oddnumbs}`);
 
 // function Iseven(element){
-//     return element % 2  === 0;
+//     return  element % 2 === 0;
 // }
 
-// console.log(evennumbs);
 
-// let oddnumbs = numbers.filter(IsOdd);
-// console.log(oddnumbs);
 
-// function IsOdd(element){
+// function isodd(element){
 //     return element % 2 === 1;
+
 // }
-
-// const ages = [16,17,18,18,19,20,60];
-// let adults = ages.filter(isAdult);
-// let under18 = ages.filter(Isudner18);
-
-// console.log(` adults are ->${adults} & and under18 kids are ${under18}`);
-
-// function isAdult(element){
-//     return element >= 18;
-// }
-
-// function Isudner18(element){
-//     return element < 18;
-// }
-
-
-const words = ["apple","Banana","Carrot","milk","children","bobasticsideeye"];
-let under7 = words.filter(getShortwords);
-console.log(under7);
-let morethen7 = words.filter(getlongwords);
-console.log(morethen7);
-
-function getShortwords(element){
-    return element.length < 7;
-}
-function getlongwords(element){
-    return element.length > 7;
-}
