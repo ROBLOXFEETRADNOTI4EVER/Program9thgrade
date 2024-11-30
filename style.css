@@ -1,0 +1,134 @@
+body{
+    color: black;
+    background-color: #AD310B;
+    /* Firefox */
+    -moz-transition: all 1s ease-in;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in;
+    /* Opera */
+    -o-transition: all 1s ease-in;
+    /* Standard */
+    transition: all 1s ease-in;}
+
+
+
+#welcomMsg{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: welcomMsg 1s ease-in-out infinite alternate;
+    -moz-animation: welcomMsg 1s ease-in-out infinite alternate;
+    animation: welcomMsg 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes welcomMsg {
+    from {
+      text-shadow: 0 0 10px #f8f8f8, 0 0 20px #e0e0e0, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #e20d0d, 0 0 30px #ff0000, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+.btns{
+
+    color: #26287e;
+    text-align: center;
+    -webkit-animation: btns 1s ease-in-out infinite alternate;
+    -moz-animation: btns 1s ease-in-out infinite alternate;
+    animation: btns 1s ease-in-out infinite alternate;
+    margin-left: 20px;
+}
+
+@-webkit-keyframes btns {
+    from {
+      text-shadow: 0 0 50px #ffffff, 0 0 70px #e0e0e0, 0 0 90px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 9 0 20px #fff, 0 0 30px #4d5fff, 0 0 40px #4d77ff, 0 0 50px #4dafff, 0 0 60px #6e4dff, 0 0 70px #ff4da6, 0 0 80px #4dffca;    }
+  }
+
+
+
+#Home{
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(0deg);
+  width: 80px;
+  height: 80px;
+  background-image: url(images/Home.png);
+  background-position: center;
+  background-size: contain;
+  background-size: 140%;
+  border-style: none;
+  border-color: rgba(0, 0, 128, 0);
+  background-color: transparent;
+  border: none;
+  border-image-outset: 20px
+
+}
+#Home:hover{
+  transition: transform 0.4s ease-in-out;
+  transform: rotate(15deg);
+}
+
+#Roulett{
+  width: 80px;
+  height: 80px;
+    border-radius: 20rem;
+    background-image: url(images/rouletlogo.jpeg);
+    background-position: center ;
+    border-color: #e20d0d8a;
+}
+
+
+#Roulett{
+  width: 80px;
+  height: 80px;
+    border-radius: 20rem;
+    background-image: url(images/rouletlogo.jpeg);
+    background-position: center ;
+    border-color: #e20d0d8a;
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(0deg);
+}
+
+#Roulett:hover{
+  width: 80px;
+  height: 80px;
+    border-radius: 20rem;
+    background-color: #ad310b4d;
+    background-image: url(images/rouletlogo.jpeg);
+
+  
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(360deg);
+    border-color: #e20d0d8a;
+}
+
+#Roulett::after:hover{
+  transform: rotate(-360deg);
+}
+
+
+#Slot {
+  width: 105px;
+  height: 80px;
+  background-image: url(images/slotmachine.png);
+  background-position: center;
+  background-size: 110%; 
+  background-color: transparent;
+  border-radius: 0;
+  border-style: none;
+  border-color: rgba(0, 0, 128, 0);
+  border: none;
+  transform-origin: center; 
+  transition: transform 0.8s ease-in-out;
+}
+
+#Slot:hover {
+  transform: rotate(720deg); 
+}
+
+
+*{
+	box-sizing:border-box;
+}
